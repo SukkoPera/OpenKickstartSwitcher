@@ -40,7 +40,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenKickstartSwitcher"
-Date "2017-12-14"
+Date "2017-12-15"
 Rev "1"
 Comp "SukkoPera"
 Comment1 "Inspired from work by Henryk Richter"
@@ -479,7 +479,7 @@ U 1 1 5A2F3104
 P 2350 1125
 F 0 "R1" V 2430 1125 50  0000 C CNN
 F 1 "10k" V 2350 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2280 1125 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2280 1125 50  0001 C CNN
 F 3 "" H 2350 1125 50  0001 C CNN
 	1    2350 1125
 	1    0    0    -1  
@@ -490,7 +490,7 @@ U 1 1 5A2F31A7
 P 2550 1125
 F 0 "R2" V 2630 1125 50  0000 C CNN
 F 1 "10k" V 2550 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2480 1125 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2480 1125 50  0001 C CNN
 F 3 "" H 2550 1125 50  0001 C CNN
 	1    2550 1125
 	1    0    0    -1  
@@ -1059,4 +1059,41 @@ F 3 "" H 10950 6250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 10950 6050
+$Comp
+L VCC #PWR011
+U 1 1 5A343310
+P 10525 3775
+F 0 "#PWR011" H 10525 3625 50  0001 C CNN
+F 1 "VCC" H 10525 3925 50  0000 C CNN
+F 2 "" H 10525 3775 50  0001 C CNN
+F 3 "" H 10525 3775 50  0001 C CNN
+	1    10525 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5A343337
+P 10525 4025
+F 0 "C1" H 10550 4125 50  0000 L CNN
+F 1 "100u" H 10550 3925 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 10563 3875 50  0001 C CNN
+F 3 "" H 10525 4025 50  0001 C CNN
+	1    10525 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 5A3433A6
+P 10525 4275
+F 0 "#PWR012" H 10525 4025 50  0001 C CNN
+F 1 "GND" H 10525 4125 50  0000 C CNN
+F 2 "" H 10525 4275 50  0001 C CNN
+F 3 "" H 10525 4275 50  0001 C CNN
+	1    10525 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10525 4275 10525 4175
+Wire Wire Line
+	10525 3875 10525 3775
 $EndSCHEMATC
