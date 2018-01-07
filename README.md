@@ -6,7 +6,7 @@ OpenKickstartSwitcher is an Open Hardware Triple Kickstart Switcher for Amiga Co
 ### Summary
 OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [work by Henryk Richter](http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/). It allows switching among three different Kickstart images, stored in a 27c800 or similar EPROM. In particular, the adapter supports 2x256 kilobyte Kickstart images (i.e.: up to version 1.3) and 1x512 kilobyte image (versions 2.0x and later).
 
-Switching among Kickstart versions can be done through two physical switches or through an external add-on board that is controlled by the status of the mouse buttons at power-up.
+Switching among Kickstart versions can be done through two physical switches or through an external add-on board that is controlled by the status of the mouse buttons at power-up (TBA).
 
 The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (0r 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM.
 
@@ -52,4 +52,4 @@ Note that SW1/SW2 will both read as HIGH if left unconnected.
 OpenKickstartSwitcher is Open Hardware.
 
 ### Thanks
-Thanks to Henryk Richter and the Italian Amiga Page forum.
+Thanks to Henryk Richter and the guys on the Italian Amiga Page forum.
