@@ -40,7 +40,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenKickstartSwitcher"
-Date "2017-12-17"
+Date "2018-01-07"
 Rev "1"
 Comp "SukkoPera"
 Comment1 "Inspired from work by Henryk Richter"

@@ -1,4 +1,4 @@
-update=ven 22 dic 2017 23:42:06 CET
+update=dom 07 gen 2018 18:08:08 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,13 @@ LibName33=libs/OpenKickstartSwitcher
 LibName34=libs/AMIGA_ROM
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
