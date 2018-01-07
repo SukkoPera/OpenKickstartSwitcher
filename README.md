@@ -52,4 +52,4 @@ Note that SW1/SW2 will both read as HIGH if left unconnected.
 OpenKickstartSwitcher is Open Hardware.
 
 ### Thanks
-Thanks to Henryk Richter and the guys on the Italian Amiga Page forum.
+Thanks to Henryk Richter and the guys at the Italian Amiga Page forum.
