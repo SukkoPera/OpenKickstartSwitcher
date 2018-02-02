@@ -1,4 +1,4 @@
-update=dom 07 gen 2018 18:08:08 CET
+update=dom 07 gen 2018 18:13:21 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,8 +61,6 @@ LibName31=contrib
 LibName32=valves
 LibName33=libs/OpenKickstartSwitcher
 LibName34=libs/AMIGA_ROM
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -73,3 +71,5 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1

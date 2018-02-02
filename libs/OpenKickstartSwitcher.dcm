@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP M27C160
+D 16 Mbit (2MB x8 or 1MB x16) UV EPROM
+K EPROM PROM memory
+F http://www.futurlec.com/Memory/27C160-100.shtml
+$ENDCMP
+#
 $CMP M27C800
 D 8 Mbit (1Mb x8 or 512Kb x16) UV EPROM
 K EPROM PROM memory
