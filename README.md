@@ -4,11 +4,11 @@ OpenKickstartSwitcher is an Open Hardware Triple Kickstart Switcher for Amiga Co
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenKickstartSwitcher/master/doc/render-top.png)
 
 ### Summary
-OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [work by Henryk Richter](http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/). It allows switching among three different Kickstart images, stored in a 27c800 or similar EPROM. In particular, the adapter supports 2x256 kilobyte Kickstart images (i.e.: up to version 1.3) and 1x512 kilobyte image (versions 2.0x and later).
+OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [work by Henryk Richter](http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/). It allows switching among three different Kickstart images, stored in a 27C800 or similar EPROM. In particular, the adapter supports 2x256 KB Kickstart images (i.e.: up to version 1.3) and 1x512 KB image (versions 2.0x and later).
 
 Switching among Kickstart versions can be done through two physical switches or through an external add-on board that is controlled by the status of the mouse buttons at power-up (TBA).
 
-The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (0r 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM.
+The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (0r 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM, so it can also be useful on the 600 and 2000.
 
 OpenKickstartSwitcher is also compatible with the infamous A500 Rev.5 board, which has a routing error on one of the Kickstart ROM address lines.
 
@@ -48,7 +48,7 @@ Note that SW1/SW2 will both read as HIGH if left unconnected.
 
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
 
-### EEPROM Programming
+### EPROM Programming
 Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with the popular TL866 programmer, for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter, which I haven't tested yet, so use at your own risk:
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
 * [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
