@@ -41,10 +41,10 @@ Installation is pretty straightforward:
 ### Kickstart selection
 To switch between ROMs, you will need two switches, connected to the SW1/SW2 pads. A ground pad is available on the board, but any ground spot on the Amiga board can be used as well, if easier to reach. Then:
 
-* If SW2 is HIGH, the 512 KB Kickstart image is selected.
+* If SW2 is HIGH, the 512 KB Kickstart image is selected, regardless of SW1.
 * If SW2 is LOW, SW1 controls which one of the two 256 KB images is enabled: LOW selects the first one, and HIGH selects the second one.
 
-Note that SW1/SW2 will both read as HIGH if left unconnected.
+Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kickstart will be selected.
 
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
 
