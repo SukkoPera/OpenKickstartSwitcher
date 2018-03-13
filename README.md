@@ -49,9 +49,11 @@ Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kicksta
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
 
 ### EPROM Programming
-Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with the popular TL866 programmer, for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter, which I haven't tested yet, so use at your own risk:
+Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with the popular TL866 programmer, for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
 * [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
+
+I have only used the latter and found it to be working fine.
 
 ### License
 OpenKickstartSwitcher is Open Hardware.
