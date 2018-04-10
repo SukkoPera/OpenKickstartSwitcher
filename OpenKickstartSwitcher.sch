@@ -40,8 +40,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenKickstartSwitcher"
-Date "2018-01-07"
-Rev "1"
+Date "2018-04-10"
+Rev "2"
 Comp "SukkoPera"
 Comment1 "Inspired from work by Henryk Richter"
 Comment2 "http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/"
@@ -81,7 +81,6 @@ F 3 "" H 9625 4150 50  0001 C CNN
 	1    9625 4150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8875 3150
 $Comp
 L AMIGA_ROM U1
 U 1 1 5A2F0238
@@ -463,23 +462,12 @@ F 3 "" H 2350 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x03 J2
-U 1 1 5A2F23BB
-P 2075 1500
-F 0 "J2" H 2075 1700 50  0000 C CNN
-F 1 "Conn_01x03" H 2075 1300 50  0001 C CNN
-F 2 "OpenKickstartSwitcher:LoosePads-3" H 2075 1500 50  0001 C CNN
-F 3 "" H 2075 1500 50  0001 C CNN
-	1    2075 1500
-	-1   0    0    -1  
-$EndComp
-$Comp
 L R R1
 U 1 1 5A2F3104
 P 2350 1125
 F 0 "R1" V 2430 1125 50  0000 C CNN
 F 1 "10k" V 2350 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2280 1125 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2280 1125 50  0001 C CNN
 F 3 "" H 2350 1125 50  0001 C CNN
 	1    2350 1125
 	1    0    0    -1  
@@ -490,7 +478,7 @@ U 1 1 5A2F31A7
 P 2550 1125
 F 0 "R2" V 2630 1125 50  0000 C CNN
 F 1 "10k" V 2550 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2480 1125 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2480 1125 50  0001 C CNN
 F 3 "" H 2550 1125 50  0001 C CNN
 	1    2550 1125
 	1    0    0    -1  
@@ -929,11 +917,11 @@ Connection ~ 3800 5925
 Wire Wire Line
 	10850 800  10850 950 
 Wire Wire Line
-	2275 1600 2350 1600
+	2050 1600 2350 1600
 Wire Wire Line
 	2350 1600 2350 1700
 Wire Wire Line
-	2275 1400 2775 1400
+	2050 1400 2775 1400
 Wire Wire Line
 	2775 1275 2775 2825
 Wire Wire Line
@@ -957,7 +945,7 @@ Wire Wire Line
 Wire Wire Line
 	5925 1925 5825 1925
 Wire Wire Line
-	2275 1500 2975 1500
+	2050 1500 2975 1500
 Wire Wire Line
 	2975 1500 2975 2150
 Wire Wire Line
@@ -971,7 +959,7 @@ Wire Wire Line
 Wire Wire Line
 	3175 1925 3325 1925
 Wire Wire Line
-	2350 875  3175 875 
+	2150 875  3175 875 
 Wire Wire Line
 	2350 875  2350 975 
 Wire Wire Line
@@ -1123,4 +1111,35 @@ sw18
 Connection ~ 3075 1275
 Text Label 2875 1075 0    60   ~ 0
 a17
+$Comp
+L Conn_01x04 J2
+U 1 1 5ACCFC51
+P 1850 1500
+F 0 "J2" H 1850 1700 50  0000 C CNN
+F 1 "Conn_01x04" H 1850 1200 50  0001 C CNN
+F 2 "OpenKickstartSwitcher:LoosePads-4" H 1850 1500 50  0001 C CNN
+F 3 "" H 1850 1500 50  0001 C CNN
+	1    1850 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1700 2150 1700
+Wire Wire Line
+	2150 1700 2150 875 
+Connection ~ 2350 875 
+$Comp
+L Conn_01x01 J3
+U 1 1 5ACD0463
+P 9075 2775
+F 0 "J3" H 9075 2875 50  0000 C CNN
+F 1 "A19" H 9075 2675 50  0000 C CNN
+F 2 "OpenKickstartSwitcher:LoosePads-1" H 9075 2775 50  0001 C CNN
+F 3 "" H 9075 2775 50  0001 C CNN
+	1    9075 2775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8875 3150 9075 3150
+Wire Wire Line
+	9075 3150 9075 2975
 $EndSCHEMATC
