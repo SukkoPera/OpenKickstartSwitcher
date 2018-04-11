@@ -17,10 +17,12 @@ Solder all components to the board. No particular order is recommended, but star
 
 The value of the two single resistors is not critical, 10k is recommended, but probably any value between 5k and 50k will do.
 
+My tests show that an SN74HC00 gate works fine. I don't recommend using parts from the *HC* series though, *HCT* or *LS* should be preferred.
+
 The two resistor arrays are not always needed. First of all, these will end up in parallel to RP106 and RP107 on A500 boards, so you must skip them if those are already populated on your particular board. If they are not, you might still get away without them, depending on the particular EPROM you are using: I have several EPROMs of the same model (but different production batches), and some need the resistors while others don't, so the only way to find out is actual testing. For this I usually just load a Kickstart 1.2 disk, start up the four *Demos* and leave them running for a while. If the system does not hang/crash in like 15 minutes (usually it is much quicker than that, sometimes it even hangs before you can start all the demos!), you don't need them, otherwise you do. If you decide to install them, they must be of the *bussed* type and the recommended value is 4.7k.
 
 ### EPROM Programming
-The access time of the EPROM is not critical. It is recommended to use 100ns or faster EPROMs, but anything up to 150ns should work reliably.
+I recommend using M27C800-100F1 EPROMs by ST. The access time of the EPROM is not critical: use 100ns or faster EPROMs if you can, but anything up to 150ns should work reliably.
 
 When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format.
 
