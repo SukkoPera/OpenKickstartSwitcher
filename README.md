@@ -21,15 +21,21 @@ The two resistor arrays should be of the *bussed* type and the recommended value
 
 The access time of the EPROM is not too critical either. It is recommended to use 100ns or faster EPROMs, but anything up to 150ns should work reliably.
 
+### EPROM Programming
 When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format.
 
+Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
+* [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
+* [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
+
+I have only used the latter and found it to be working fine.
+
 ### Installation
-Installation is pretty straightforward:
-* Program your EPROM.
-* Plug it into your OpenKickStartswitcher.
-* Set the jumper on OpenKickstartSwitcher so that it reflects the type of mainboard your Amiga has: one position is for A500 Rev.5, the other one is for all other cases.
+Once your OpenKickstartSwitcher is assembled and programmed, the rest of the installation should be pretty straightforward:
 * Open your Amiga.
 * Remove the shielding.
+* Identify the mainboard revision by looking at the bottom right corner near the floppy drive zone.
+* Set the jumper on OpenKickstartSwitcher so that it reflects the type of mainboard your Amiga has: one position is for A500 Rev.5, the other one is for all other cases.
 * Identify the Kickstart chip.
 * Carefully remove it.
 * Plug OpenKickstartSwitcher in its place, making sure to match the correct orientation.
@@ -47,13 +53,6 @@ To switch between ROMs, you will need two switches, connected to the SW1/SW2 pad
 Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kickstart will be selected if no switches are wired.
 
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
-
-### EPROM Programming
-Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
-* [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
-* [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
-
-I have only used the latter and found it to be working fine.
 
 ### License
 OpenKickstartSwitcher is Open Hardware.
