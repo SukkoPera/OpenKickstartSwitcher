@@ -24,7 +24,7 @@ The two resistor arrays are not always needed. First of all, these will end up i
 ### EPROM Programming
 I recommend using M27C800-100F1 EPROMs by ST. The access time of the EPROM is not critical: use 100ns or faster EPROMs if you can, but anything up to 150ns should work reliably.
 
-When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format.
+When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format (which is NOT the format UAE expects them in, for the record).
 
 Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
