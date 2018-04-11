@@ -21,7 +21,7 @@ The two resistor arrays should be of the *bussed* type and the recommended value
 
 The access time of the EPROM is not too critical either. It is recommended to use 100ns or faster EPROMs, but anything up to 150ns should work reliably.
 
-When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first.
+When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format.
 
 ### Installation
 Installation is pretty straightforward:
@@ -44,12 +44,12 @@ To switch between ROMs, you will need two switches, connected to the SW1/SW2 pad
 * If SW2 is HIGH, the 512 KB Kickstart image is selected, regardless of SW1.
 * If SW2 is LOW, SW1 controls which one of the two 256 KB images is enabled: LOW selects the first one, and HIGH selects the second one.
 
-Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kickstart will be selected.
+Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kickstart will be selected by default.
 
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
 
 ### EPROM Programming
-Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with the popular TL866 programmer, for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
+Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has its own Kickstart Switcher)
 * [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
 
