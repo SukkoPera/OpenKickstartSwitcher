@@ -40,7 +40,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenKickstartSwitcher"
-Date "2018-04-10"
+Date "2018-04-12"
 Rev "2"
 Comp "SukkoPera"
 Comment1 "Inspired from work by Henryk Richter"
@@ -1127,19 +1127,59 @@ Wire Wire Line
 Wire Wire Line
 	2150 1700 2150 875 
 Connection ~ 2350 875 
+Wire Wire Line
+	8875 3150 9900 3150
 $Comp
-L Conn_01x01 J3
-U 1 1 5ACD0463
-P 9075 2775
-F 0 "J3" H 9075 2875 50  0000 C CNN
-F 1 "A19" H 9075 2675 50  0000 C CNN
-F 2 "OpenKickstartSwitcher:LoosePads-1" H 9075 2775 50  0001 C CNN
-F 3 "" H 9075 2775 50  0001 C CNN
-	1    9075 2775
-	0    -1   -1   0   
+L Conn_01x03 J4
+U 1 1 5ACFB332
+P 10100 3150
+F 0 "J4" H 10100 3350 50  0000 C CNN
+F 1 "Conn_01x03" H 10100 2950 50  0001 C CNN
+F 2 "OpenKickstartSwitcher:SolderJumper" H 10100 3150 50  0001 C CNN
+F 3 "" H 10100 3150 50  0001 C CNN
+	1    10100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR013
+U 1 1 5ACFB9D7
+P 9800 2975
+F 0 "#PWR013" H 9800 2825 50  0001 C CNN
+F 1 "VCC" H 9800 3125 50  0000 C CNN
+F 2 "" H 9800 2975 50  0001 C CNN
+F 3 "" H 9800 2975 50  0001 C CNN
+	1    9800 2975
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8875 3150 9075 3150
+	9800 2975 9800 3050
 Wire Wire Line
-	9075 3150 9075 2975
+	9800 3050 9900 3050
+$Comp
+L GND #PWR014
+U 1 1 5ACFBBEC
+P 9800 3325
+F 0 "#PWR014" H 9800 3075 50  0001 C CNN
+F 1 "GND" H 9800 3175 50  0000 C CNN
+F 2 "" H 9800 3325 50  0001 C CNN
+F 3 "" H 9800 3325 50  0001 C CNN
+	1    9800 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 3325 9800 3250
+Wire Wire Line
+	9800 3250 9900 3250
+$Comp
+L Conn_01x01 J98
+U 1 1 5ACFCA75
+P 10650 6250
+F 0 "J98" H 10650 6350 50  0000 C CNN
+F 1 "LOGO" H 10650 6150 50  0000 C CNN
+F 2 "logo:logo" H 10650 6250 50  0001 C CNN
+F 3 "" H 10650 6250 50  0001 C CNN
+	1    10650 6250
+	0    1    1    0   
+$EndComp
+NoConn ~ 10650 6050
 $EndSCHEMATC
