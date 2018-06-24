@@ -57,7 +57,7 @@ Note that SW1/SW2 will both read as HIGH if left unconnected, so the 512 Kicksta
 **IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES.**
 
 ### License
-OpenC64Cart is Open Hardware. If you make any modifications to the board, please contribute them back.
+OpenKickstartSwitcher is Open Hardware. If you make any modifications to the board, please contribute them back.
 
 ### Support the Project
 Since the project is open you are free to get the PCBs made by your preferred manufacturer, however in case you want to support the development, you can order them from PCBWay through this link:
