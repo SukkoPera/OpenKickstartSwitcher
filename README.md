@@ -8,7 +8,7 @@ OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [wor
 
 Switching among Kickstart versions can be done through two physical switches or through an external add-on board that is controlled by the status of the mouse buttons at power-up (TBA).
 
-The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (0r 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM, so it can also be useful on the 600 and 2000.
+The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (Or 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM, so it can also be useful on the 600 and 2000.
 
 OpenKickstartSwitcher is also compatible with the infamous A500 Rev.5 board, which has a routing error on one of the Kickstart ROM address lines.
 
