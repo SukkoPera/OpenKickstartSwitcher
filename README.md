@@ -37,7 +37,7 @@ Once your OpenKickstartSwitcher is assembled and programmed, the rest of the ins
 * Open your Amiga.
 * Remove the shielding.
 * Identify the mainboard revision by looking at the bottom right corner near the floppy drive zone.
-* Set the jumper on OpenKickstartSwitcher so that it reflects the type of mainboard your Amiga has: one position is for A500 Rev.5, the other one is for all other cases.
+* Set the jumper on OpenKickstartSwitcher so that it reflects the type of mainboard your Amiga has: one position is for A500 Rev.5 (and Rev.3!), the other one is for all other cases, including A600 and A2000.
 * Identify the Kickstart chip.
 * Carefully remove it.
 * Plug OpenKickstartSwitcher in its place, making sure to match the correct orientation.
