@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name OpenKickstartSwitcher-rescue)(type Legacy)(uri ${KIPRJMOD}/OpenKickstartSwitcher-rescue.lib)(options "")(descr ""))
+  (lib (name OpenKickstartSwitcher)(type Legacy)(uri ${KIPRJMOD}/libs/OpenKickstartSwitcher.lib)(options "")(descr ""))
+  (lib (name AMIGA_ROM)(type Legacy)(uri ${KIPRJMOD}/libs/AMIGA_ROM.lib)(options "")(descr ""))
+)

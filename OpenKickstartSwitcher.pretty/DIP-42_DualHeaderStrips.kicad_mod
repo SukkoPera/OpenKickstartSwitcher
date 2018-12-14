@@ -1,10 +1,10 @@
-(module DIP-42_DualHeaderStrips (layer F.Cu) (tedit 5A32E9D1)
+(module DIP-42_DualHeaderStrips (layer F.Cu) (tedit 5C142E10)
   (descr "42-lead dip package, row spacing 15.24 mm (600 mils), Socket")
   (tags "DIL DIP PDIP 2.54mm 15.24mm 600mil Socket")
-  (fp_text reference U2 (at 7.62 -2.39) (layer F.SilkS) hide
+  (fp_text reference U1 (at 7.62 -2.39) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value M27C800 (at 7.62 53.19) (layer F.Fab)
+  (fp_text value KS_SOCKET (at 7.62 53.19) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start 16.5 -1.5) (end 14.25 -1.5) (layer B.SilkS) (width 0.15))
@@ -31,7 +31,7 @@
   (fp_line (start -1.7 52.5) (end 16.9 52.5) (layer F.CrtYd) (width 0.05))
   (fp_line (start 16.9 52.5) (end 16.9 -1.7) (layer F.CrtYd) (width 0.05))
   (fp_line (start 16.9 -1.7) (end -1.7 -1.7) (layer F.CrtYd) (width 0.05))
-  (pad 1 thru_hole rect (at 0 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
+  (pad 1 thru_hole circle (at 0 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   (pad 22 thru_hole oval (at 15.24 50.8) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   (pad 2 thru_hole oval (at 0 2.54) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   (pad 23 thru_hole oval (at 15.24 48.26) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
@@ -73,9 +73,14 @@
   (pad 41 thru_hole oval (at 15.24 2.54) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   (pad 21 thru_hole oval (at 0 50.8) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   (pad 42 thru_hole oval (at 15.24 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/Housings_DIP.3dshapes/DIP-42_W15.24mm_Socket.wrl
-    (at (xyz 0 0 0))
+  (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x21_P2.54mm_Vertical.step
+    (offset (xyz 15.2 0 -2))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
+    (rotate (xyz 0 180 0))
+  )
+  (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x21_P2.54mm_Vertical.step
+    (offset (xyz 0 0 -2))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 180 0))
   )
 )

@@ -1,46 +1,12 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:OpenKickstartSwitcher
-LIBS:AMIGA_ROM
+EESchema Schematic File Version 4
 LIBS:OpenKickstartSwitcher-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenKickstartSwitcher"
-Date "2018-04-12"
+Date "2018-12-07"
 Rev "2"
 Comp "SukkoPera"
 Comment1 "Inspired from work by Henryk Richter"
@@ -49,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L M27C800 U2
+L OpenKickstartSwitcher:M27C800 U2
 U 1 1 5A2EFF95
 P 8125 4150
 F 0 "U2" H 8125 4050 50  0000 C CNN
@@ -60,7 +26,7 @@ F 3 "DOCUMENTATION" H 8125 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5A2F0069
 P 8125 6000
 F 0 "#PWR01" H 8125 5750 50  0001 C CNN
@@ -71,7 +37,7 @@ F 3 "" H 8125 6000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR02
+L power:VCC #PWR02
 U 1 1 5A2F009A
 P 9625 4150
 F 0 "#PWR02" H 9625 4000 50  0001 C CNN
@@ -82,7 +48,7 @@ F 3 "" H 9625 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AMIGA_ROM U1
+L AMIGA_ROM:AMIGA_ROM U1
 U 1 1 5A2F0238
 P 3825 4150
 F 0 "U1" H 3825 4050 50  0000 C CNN
@@ -329,7 +295,7 @@ Entry Wire Line
 Entry Wire Line
 	6850 5050 6950 5150
 $Comp
-L VCC #PWR03
+L power:VCC #PWR03
 U 1 1 5A2F123D
 P 5275 5150
 F 0 "#PWR03" H 5275 5000 50  0001 C CNN
@@ -372,7 +338,7 @@ d12
 Text Label 9100 5050 0    60   ~ 0
 d4
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5A2F148C
 P 3800 6000
 F 0 "#PWR04" H 3800 5750 50  0001 C CNN
@@ -383,7 +349,7 @@ F 3 "" H 3800 6000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 5A2F17D8
 P 10850 950
 F 0 "#PWR05" H 10850 700 50  0001 C CNN
@@ -394,7 +360,7 @@ F 3 "" H 10850 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L power:PWR_FLAG #FLG06
 U 1 1 5A2F17E9
 P 10850 800
 F 0 "#FLG06" H 10850 875 50  0001 C CNN
@@ -407,51 +373,51 @@ $EndComp
 Text Label 5700 5700 0    60   ~ 0
 data_bus
 $Comp
-L 7400 U3
+L OpenKickstartSwitcher-rescue:7400 U3
 U 1 1 5A2F1A87
 P 6625 1500
 F 0 "U3" H 6625 1550 50  0000 C CNN
 F 1 "7400" H 6625 1400 50  0000 C CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm" H 6625 1500 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6625 1500 50  0001 C CNN
 F 3 "" H 6625 1500 50  0001 C CNN
 	1    6625 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7400 U3
+L OpenKickstartSwitcher-rescue:7400 U3
 U 2 1 5A2F1BDC
 P 3925 1175
 F 0 "U3" H 3925 1225 50  0000 C CNN
 F 1 "7400" H 3925 1075 50  0000 C CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm" H 3925 1175 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3925 1175 50  0001 C CNN
 F 3 "" H 3925 1175 50  0001 C CNN
 	2    3925 1175
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7400 U3
+L OpenKickstartSwitcher-rescue:7400 U3
 U 3 1 5A2F1C7F
 P 3925 1825
 F 0 "U3" H 3925 1875 50  0000 C CNN
 F 1 "7400" H 3925 1725 50  0000 C CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm" H 3925 1825 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3925 1825 50  0001 C CNN
 F 3 "" H 3925 1825 50  0001 C CNN
 	3    3925 1825
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7400 U3
+L OpenKickstartSwitcher-rescue:7400 U3
 U 4 1 5A2F1D22
 P 5225 1925
 F 0 "U3" H 5225 1975 50  0000 C CNN
 F 1 "7400" H 5225 1825 50  0000 C CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm" H 5225 1925 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5225 1925 50  0001 C CNN
 F 3 "" H 5225 1925 50  0001 C CNN
 	4    5225 1925
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5A2F233F
 P 2350 1700
 F 0 "#PWR07" H 2350 1450 50  0001 C CNN
@@ -462,29 +428,29 @@ F 3 "" H 2350 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L OpenKickstartSwitcher-rescue:R R1
 U 1 1 5A2F3104
 P 2350 1125
 F 0 "R1" V 2430 1125 50  0000 C CNN
 F 1 "10k" V 2350 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2280 1125 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2280 1125 50  0001 C CNN
 F 3 "" H 2350 1125 50  0001 C CNN
 	1    2350 1125
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L OpenKickstartSwitcher-rescue:R R2
 U 1 1 5A2F31A7
 P 2550 1125
 F 0 "R2" V 2630 1125 50  0000 C CNN
 F 1 "10k" V 2550 1125 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2480 1125 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2480 1125 50  0001 C CNN
 F 3 "" H 2550 1125 50  0001 C CNN
 	1    2550 1125
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR08
+L power:VCC #PWR08
 U 1 1 5A2F31EC
 P 2775 750
 F 0 "#PWR08" H 2775 600 50  0001 C CNN
@@ -507,23 +473,23 @@ sw18 H -> H\nsw18 L -> !sw17
 Text Notes 775  7525 0    60   ~ 0
 *** NAND Truth Table ***\n\nA		B		Output\n0		0		1\n0		1		1\n1		0		1\n1		1		0
 $Comp
-L R_Network09 RN2
+L OpenKickstartSwitcher-rescue:R_Network09 RN2
 U 1 1 5A32C9CC
 P 3625 6950
 F 0 "RN2" V 3125 6950 50  0000 C CNN
 F 1 "4.7k" V 4125 6950 50  0001 C CNN
-F 2 "Resistors_THT:R_Array_SIP10" V 4200 6950 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 4200 6950 50  0001 C CNN
 F 3 "" H 3625 6950 50  0001 C CNN
 	1    3625 6950
 	-1   0    0    -1  
 $EndComp
 $Comp
-L R_Network09 RN1
+L OpenKickstartSwitcher-rescue:R_Network09 RN1
 U 1 1 5A32CB81
 P 4750 6950
 F 0 "RN1" V 4250 6950 50  0000 C CNN
 F 1 "4.7k" V 5250 6950 50  0001 C CNN
-F 2 "Resistors_THT:R_Array_SIP10" V 5325 6950 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 5325 6950 50  0001 C CNN
 F 3 "" H 4750 6950 50  0001 C CNN
 	1    4750 6950
 	1    0    0    -1  
@@ -597,7 +563,7 @@ a15
 Text Label 3225 7150 3    60   ~ 0
 a16
 $Comp
-L VCC #PWR09
+L power:VCC #PWR09
 U 1 1 5A32D571
 P 4200 6600
 F 0 "#PWR09" H 4200 6450 50  0001 C CNN
@@ -608,7 +574,7 @@ F 3 "" H 4200 6600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 5A32E35E
 P 4225 7225
 F 0 "#PWR010" H 4225 6975 50  0001 C CNN
@@ -619,7 +585,7 @@ F 3 "" H 4225 7225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x03 J1
+L OpenKickstartSwitcher-rescue:Conn_01x03 J1
 U 1 1 5A32E893
 P 1925 3350
 F 0 "J1" H 1925 3550 50  0000 C CNN
@@ -630,7 +596,7 @@ F 3 "" H 1925 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Conn_01x01 J99
+L OpenKickstartSwitcher-rescue:Conn_01x01 J99
 U 1 1 5A3320D3
 P 10950 6250
 F 0 "J99" H 10950 6350 50  0000 C CNN
@@ -642,7 +608,7 @@ F 3 "" H 10950 6250 50  0001 C CNN
 $EndComp
 NoConn ~ 10950 6050
 $Comp
-L VCC #PWR011
+L power:VCC #PWR011
 U 1 1 5A343310
 P 6175 6750
 F 0 "#PWR011" H 6175 6600 50  0001 C CNN
@@ -653,18 +619,18 @@ F 3 "" H 6175 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L OpenKickstartSwitcher-rescue:C C1
 U 1 1 5A343337
 P 6025 7050
 F 0 "C1" H 6050 7150 50  0000 L CNN
 F 1 "100n" H 6050 6950 50  0000 L CNN
-F 2 "Capacitors_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 6063 6900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 6063 6900 50  0001 C CNN
 F 3 "" H 6025 7050 50  0001 C CNN
 	1    6025 7050
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 5A3433A6
 P 6175 7350
 F 0 "#PWR012" H 6175 7100 50  0001 C CNN
@@ -675,12 +641,12 @@ F 3 "" H 6175 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L OpenKickstartSwitcher-rescue:C C2
 U 1 1 5A36EFAF
 P 6325 7050
 F 0 "C2" H 6350 7150 50  0000 L CNN
 F 1 "100n" H 6350 6950 50  0000 L CNN
-F 2 "Capacitors_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 6363 6900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 6363 6900 50  0001 C CNN
 F 3 "" H 6325 7050 50  0001 C CNN
 	1    6325 7050
 	1    0    0    -1  
@@ -690,7 +656,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 4250 6750 5925
 Wire Wire Line
-	6750 5925 9525 5925
+	6750 5925 8125 5925
 Wire Wire Line
 	9525 5925 9525 4250
 Wire Wire Line
@@ -739,9 +705,7 @@ Wire Wire Line
 Wire Wire Line
 	8875 4050 9300 4050
 Wire Wire Line
-	9625 4150 9625 5225
-Wire Bus Line
-	6850 2625 6850 3950
+	9625 4150 9625 4200
 Wire Wire Line
 	3075 3350 2650 3350
 Wire Wire Line
@@ -776,8 +740,6 @@ Wire Wire Line
 	4575 3950 5000 3950
 Wire Wire Line
 	4575 4050 5000 4050
-Wire Bus Line
-	5100 2625 5100 4150
 Wire Wire Line
 	3075 4450 2650 4450
 Wire Wire Line
@@ -811,11 +773,7 @@ Wire Wire Line
 Wire Wire Line
 	4575 5050 5000 5050
 Wire Bus Line
-	5100 4450 5100 5700
-Wire Bus Line
 	9400 5700 2550 5700
-Wire Bus Line
-	2550 5700 2550 4350
 Wire Wire Line
 	3075 4350 2700 4350
 Wire Wire Line
@@ -847,11 +805,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 4200 9625 4200
 Wire Bus Line
-	2550 2625 2550 3950
-Wire Bus Line
 	2550 2625 9400 2625
-Wire Bus Line
-	9400 2625 9400 4150
 Wire Wire Line
 	8875 4350 9300 4350
 Wire Wire Line
@@ -869,10 +823,6 @@ Wire Wire Line
 Wire Wire Line
 	8875 5050 9300 5050
 Connection ~ 9625 4200
-Wire Bus Line
-	6850 4350 6850 5700
-Wire Bus Line
-	9400 4450 9400 5700
 Wire Wire Line
 	8875 5150 9300 5150
 Wire Wire Line
@@ -902,7 +852,7 @@ Wire Wire Line
 Wire Wire Line
 	5425 4250 5425 5925
 Wire Wire Line
-	5425 5925 2325 5925
+	5425 5925 3800 5925
 Wire Wire Line
 	2325 5925 2325 4150
 Wire Wire Line
@@ -921,9 +871,9 @@ Wire Wire Line
 Wire Wire Line
 	2350 1600 2350 1700
 Wire Wire Line
-	2050 1400 2775 1400
+	2050 1400 2350 1400
 Wire Wire Line
-	2775 1275 2775 2825
+	2775 1275 2775 1400
 Wire Wire Line
 	2875 1075 3325 1075
 Wire Wire Line
@@ -945,7 +895,7 @@ Wire Wire Line
 Wire Wire Line
 	5925 1925 5825 1925
 Wire Wire Line
-	2050 1500 2975 1500
+	2050 1500 2550 1500
 Wire Wire Line
 	2975 1500 2975 2150
 Wire Wire Line
@@ -959,7 +909,7 @@ Wire Wire Line
 Wire Wire Line
 	3175 1925 3325 1925
 Wire Wire Line
-	2150 875  3175 875 
+	2150 875  2350 875 
 Wire Wire Line
 	2350 875  2350 975 
 Wire Wire Line
@@ -1023,8 +973,6 @@ Wire Wire Line
 	3325 7150 3325 7325
 Wire Wire Line
 	3225 7150 3225 7325
-Wire Bus Line
-	3125 7425 5050 7425
 Wire Wire Line
 	1925 3150 1925 2925
 Wire Wire Line
@@ -1058,7 +1006,7 @@ Wire Wire Line
 Wire Wire Line
 	4025 6750 4025 6675
 Wire Wire Line
-	4025 6675 4350 6675
+	4025 6675 4200 6675
 Connection ~ 4200 6675
 Wire Wire Line
 	4200 6600 4200 6675
@@ -1091,33 +1039,33 @@ Wire Wire Line
 Wire Wire Line
 	6025 6900 6025 6800
 Wire Wire Line
-	6025 6800 6325 6800
+	6025 6800 6175 6800
 Wire Wire Line
 	6325 6800 6325 6900
 Wire Wire Line
 	6175 6750 6175 6800
 Connection ~ 6175 6800
 Wire Wire Line
-	6025 7300 6325 7300
+	6025 7300 6175 7300
 Wire Wire Line
 	6325 7300 6325 7200
 Wire Wire Line
 	6175 7300 6175 7350
 Connection ~ 6175 7300
 Wire Wire Line
-	2775 1275 3325 1275
+	2775 1275 3075 1275
 Text Label 2775 1750 1    60   ~ 0
 sw18
 Connection ~ 3075 1275
 Text Label 2875 1075 0    60   ~ 0
 a17
 $Comp
-L Conn_01x04 J2
+L OpenKickstartSwitcher-rescue:Conn_01x04 J2
 U 1 1 5ACCFC51
 P 1850 1500
 F 0 "J2" H 1850 1700 50  0000 C CNN
 F 1 "Conn_01x04" H 1850 1200 50  0001 C CNN
-F 2 "OpenKickstartSwitcher:LoosePads-4" H 1850 1500 50  0001 C CNN
+F 2 "OpenKickstartSwitcher:Solderable_PinHeader_1x04" H 1850 1500 50  0001 C CNN
 F 3 "" H 1850 1500 50  0001 C CNN
 	1    1850 1500
 	-1   0    0    -1  
@@ -1130,7 +1078,7 @@ Connection ~ 2350 875
 Wire Wire Line
 	8875 3150 9900 3150
 $Comp
-L Conn_01x03 J4
+L OpenKickstartSwitcher-rescue:Conn_01x03 J4
 U 1 1 5ACFB332
 P 10100 3150
 F 0 "J4" H 10100 3350 50  0000 C CNN
@@ -1141,7 +1089,7 @@ F 3 "" H 10100 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR013
+L power:VCC #PWR013
 U 1 1 5ACFB9D7
 P 9800 2975
 F 0 "#PWR013" H 9800 2825 50  0001 C CNN
@@ -1156,7 +1104,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 3050 9900 3050
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 5ACFBBEC
 P 9800 3325
 F 0 "#PWR014" H 9800 3075 50  0001 C CNN
@@ -1171,7 +1119,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 3250 9900 3250
 $Comp
-L Conn_01x01 J98
+L OpenKickstartSwitcher-rescue:Conn_01x01 J98
 U 1 1 5ACFCA75
 P 10650 6250
 F 0 "J98" H 10650 6350 50  0000 C CNN
@@ -1182,4 +1130,48 @@ F 3 "" H 10650 6250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 10650 6050
+Wire Wire Line
+	8125 5925 9525 5925
+Wire Wire Line
+	9625 4200 9625 5225
+Wire Wire Line
+	3800 5925 2325 5925
+Wire Wire Line
+	2775 875  3175 875 
+Wire Wire Line
+	2350 1400 2775 1400
+Wire Wire Line
+	2550 1500 2975 1500
+Wire Wire Line
+	2775 1400 2775 2825
+Wire Wire Line
+	2550 875  2775 875 
+Wire Wire Line
+	4200 6675 4350 6675
+Wire Wire Line
+	6175 6800 6325 6800
+Wire Wire Line
+	6175 7300 6325 7300
+Wire Wire Line
+	3075 1275 3325 1275
+Wire Wire Line
+	2350 875  2550 875 
+Wire Bus Line
+	6850 2625 6850 3950
+Wire Bus Line
+	5100 2625 5100 4150
+Wire Bus Line
+	5100 4450 5100 5700
+Wire Bus Line
+	2550 4350 2550 5700
+Wire Bus Line
+	2550 2625 2550 3950
+Wire Bus Line
+	9400 2625 9400 4150
+Wire Bus Line
+	6850 4350 6850 5700
+Wire Bus Line
+	9400 4450 9400 5700
+Wire Bus Line
+	3125 7425 5050 7425
 $EndSCHEMATC
