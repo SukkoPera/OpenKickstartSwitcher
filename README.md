@@ -11,7 +11,7 @@ The adapter is mostly targeted at Amiga 500+ users, who can use it to switch amo
 
 The situation is pretty much the same on Amiga 500s with Rev.6A mainboards.
 
-Amiga 500 Rev.3 and 5 mainboards have their Kickstart sockets placed further towards the back of the machine, which allows the adapte to fit much better. There is plenty is space and you should manage to put everything in place and close the case properly. 
+Amiga 500 Rev.3 and 5 mainboards have their Kickstart sockets placed further towards the back of the machine, which allows the adapter to fit much better. There is plenty is space and you should manage to put everything in place and close the case properly. 
 
 Besides the 500/500+, OpenKickstartSwitcher will work correctly on all Amiga models that have a single-chip Kickstart: this means it can be used on the A2000 just as well. It will also work on the A600, but you won't be able to place the keyboard back into the case, so it might be more useful when troubleshooting a broken mainboard. The same applies for the CDTV, but [a special version](https://github.com/SukkoPera/OpenKickstartSwitcherCDTV) was designed for this model, which will fit perfectly.
 
