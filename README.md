@@ -8,9 +8,16 @@ OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [wor
 
 Switching among Kickstart versions can be done through two physical switches or by pressing the mouse/joystick buttons at power-up. The latter requires [an external add-on board](https://github.com/SukkoPera/OpenAmigaMouseTrigger) that is another project of mine.
 
-The adapter is mostly targeted at Amiga 500+ users, which can use it to switch among Kickstart 2.04 (Or 3.x at their will), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), achieving a high level of compatibility with troublesome software that does not work correctly on Kickstart 2.x. It will work correctly on other Amiga versions as well though, as long as it physically fits in place of the original Kickstart ROM, so it can also be useful on the 600 and 2000.
+### Compatibility
+The adapter is mostly targeted at Amiga 500+ users, who can use it to switch among Kickstart 3.1 (or 2.04 if they want to keep the version that came originally on their machines), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), improving compatibility with older software that does not work correctly on Kickstart 2.x. Note that the adapter will have a tight fit on Rev.8A.1 mainboards (which is what 500+'s have): V2 was reworked to fix this issue, but the upper part of the shield will still touch the EPROM, so it is recommended to apply some insulation tape on the contact point or to remove the upper shield altogether (this won't do any harm, so don't worry too much about it, it will actually improve internal cooling).
 
-OpenKickstartSwitcher is also compatible with the infamous A500 Rev.5 board, which has a routing error on one of the Kickstart ROM address lines.
+The situation is pretty much the same with Rev.6A mainboards.
+
+Rev.3 and 5 mainboards have their Kickstart sockets placed further towards the back of the machine, which allows the adapte to fit much better. There is plenty is space and you should manage to put everything in place and close the case properly. 
+
+Besides the 500/500+, OpenKickstartSwitcher will work correctly on all Amiga models that have a single-chip Kickstart: this means it can be used on the A2000 just as well. It will also work on the A600, but you won't be able to place the keyboard back into the case, so it might be more useful when troubleshooting a broken mainboard. The same applies for the CDTV, but [a special version](https://github.com/SukkoPera/OpenKickstartSwitcherCDTV) was designed for this model, which will fit perfectly.
+
+In all cases, **pay attention to put the revision selection jumper in the correct position**: one position is for A500 Rev.3 and 5, the other one is for all other cases, including A600 and A2000.
 
 ### Assembly
 Solder all components to the board. No particular order is recommended, but starting with the smaller components might be a good idea.
@@ -26,7 +33,11 @@ I recommend using M27C800-100F1 EPROMs by ST. The access time of the EPROM is no
 
 When flashing the EPROM, make sure that the ROM images you are using are exactly 2x262144 and 1x524288 bytes long, and just concatenate them, with the smaller ROMs first. You must also take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format (which is NOT the format UAE expects them in, for the record).
 
-Note that the 27C800 is a 42-pin EPROM, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
+Since V2, the board also exposes the A19 address pin, which allows using M27C160 EPROMs: since these seem cheaper than M27C800s, you can use them, provided that you connect A19 to GND or VCC, depending on how you flash the EPROM: use GND if you flash the lower addresses, and vice-versa.
+
+You can even use this feature to have SIX (!) Kickstart images on your Amiga: just wire another SPDT switch to A19 (center pin), VCC and GND: this way you will be able to switch among 4 256KB images and 2 512KB images, which is basically whatever you might EVER need (say: DiagROM, 1.2, 1.3, 1.4alpha, 2.05 and 3.1).
+
+Note that the M27C800 and M27C160 are 42-pin EPROMs, and most programmers only support chips up to 40 pins. This is the case with [the popular TL866 programmer](http://autoelectric.cn/EN/TL866_main.html), for instance. You can get around this limitation with an adapter PCB. There are at least two open designs of such an adapter:
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has his own Kickstart Switcher)
 * [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
 
@@ -36,8 +47,7 @@ I have only used the latter and found it to be working fine.
 Once your OpenKickstartSwitcher is assembled and programmed, the rest of the installation should be pretty straightforward:
 * Open your Amiga.
 * Remove the shielding.
-* Identify the mainboard revision by looking at the bottom right corner near the floppy drive zone.
-* Set the jumper on OpenKickstartSwitcher so that it reflects the type of mainboard your Amiga has: one position is for A500 Rev.5 (and Rev.3!), the other one is for all other cases, including A600 and A2000.
+* Set the revision selection jumper on OpenKickstartSwitcher according to the Amiga model (see above). On Amiga 500/500+'s you can identify the mainboard revision by looking at the bottom right corner near the floppy drive zone.
 * Identify the Kickstart chip.
 * Carefully remove it.
 * Plug OpenKickstartSwitcher in its place, making sure to match the correct orientation.
@@ -75,3 +85,4 @@ If you need help or have questions, you can join [the official Telegram group](h
 
 ### Thanks
 Thanks to Henryk Richter and the guys at the Italian Amiga Page forum.
+Kudos to Aldo PRS for prividing information about how the adapter fits on the various A500/500+ mainboard revisions.
