@@ -68,7 +68,7 @@ You will need to solder an additional switch to the A19 pad on the bottom side o
 | 5           | 256       | HIGH| LOW | HIGH|
 | 6           | 512       |  x  | HIGH| HIGH|
 
-**IMPORTANT: ALWAYS TURN YOUR CDTV OFF BEFORE MOVING THE SELECTION SWITCHES.**
+**IMPORTANT: ALWAYS TURN YOUR AMIGA OFF BEFORE MOVING THE SELECTION SWITCHES!**
 
 #### Flashing Notes
 When flashing the EPROM, make sure that the ROM images you are using are exactly 262144 or 524288 bytes long, and just concatenate them. Take care to use the correct byte ordering, as the Amiga hardware expects 16-bit words to be stored in the *big-endian* format (which is NOT the format UAE expects them in, for the record). On Unix-like systems you can use the *conv=swab* option of *dd* to change the byte ordering.
