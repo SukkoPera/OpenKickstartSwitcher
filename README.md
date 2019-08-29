@@ -1,12 +1,10 @@
 # OpenKickstartSwitcher
-OpenKickstartSwitcher is an Open Hardware Triple Kickstart Switcher for Amiga Computers.
+OpenKickstartSwitcher is an Open Hardware Kickstart Switcher for Amiga Computers.
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenKickstartSwitcher/master/doc/render-top.png)
 
 ### Summary
-OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [work by Henryk Richter](http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/). It allows switching among three different Kickstart images, stored in a 27C800 or similar EPROM. In particular, the adapter supports 2x256 KB Kickstart images (i.e.: up to version 1.3) and 1x512 KB image (versions 2.0x and later).
-
-Switching among Kickstart versions can be done through two physical switches or by pressing the mouse/joystick buttons at power-up. The latter requires [an external add-on board](https://github.com/SukkoPera/OpenAmigaMouseTrigger) that is another project of mine.
+OpenKickstartSwitcher is a Kickstart switcher for Amiga computers, based on [work by Henryk Richter](http://bax.comlab.uni-rostock.de/en/hardware/amiga500/kickstart-eprom/). It allows switching among three or six different Kickstart images, stored in an EPROM. Switching among Kickstart versions can be done through physical switches or by pressing the mouse/joystick buttons at power-up. The latter requires [an external add-on board](https://github.com/SukkoPera/OpenAmigaMouseTrigger) that is another project of mine.
 
 ### Compatibility
 The adapter is mostly targeted at Amiga 500+ users, who can use it to switch among Kickstart 3.1 (or 2.04 if they want to keep the version that came originally on their machines), 1.3 and maybe [a diagnostic ROM](http://www.diagrom.com), improving compatibility with older software that does not work correctly on Kickstart 2.x. Note that the adapter will have a tight fit on Rev.8A.1 mainboards (which is what 500+'s have): V2 was reworked to fix this issue, but the upper part of the shield will still touch the EPROM, so it is recommended to apply some insulation tape on the contact point or to remove the upper shield altogether (this won't do any harm, so don't worry too much about it, it will actually improve the internal cooling).
