@@ -20,14 +20,14 @@ In all cases, **pay attention to put the revision selection jumper in the correc
 ### Assembly
 Solder all components to the board. No particular order is recommended, but starting with the smaller components might be a good idea.
 
-The value of the two single resistors is not critical, 10k is recommended, but probably any value between 5k and 50k will do.
+The value of the two single resistors is not critical, 10k is recommended, but probably any value between 5k and 50k will do. If you intend on using 27C160 / 29F1615 with six images, you will need a pullup resistor of the same value between A19 and VCC; an 0805 SMD resistor fits in that space just fine. This is a tiny part, but it can be soldered without a loupe or microscope since the pads are pretty big.
 
 My tests show that an SN74HC00 gate works fine. I don't recommend using parts from the *HC* series though, *HCT* or *LS* should be preferred.
 
 The two resistor arrays are not always needed. First of all, these will end up in parallel to RP106 and RP107 on A500 boards, so you must skip them if those are already populated on your particular board. If they are not, you might still get away without them, depending on the particular EPROM you are using: I have several EPROMs of the same model (but different production batches), and some need the resistors while others don't, so the only way to find out is actual testing. For this I usually just load a Kickstart 1.2 disk, start up the four *Demos* and leave them running for a while. If the system does not hang/crash in like 15 minutes (usually it is much quicker than that, sometimes it even hangs before you can start all the demos!), you don't need them, otherwise you do. If you decide to install them, they must be of the *bussed* type and the recommended value is 4.7k. Be aware that these parts are polarized and must be installed in a certain verse!
 
 ### EPROM Selection and Switch Wiring
-Since V2, the adapter can be used with either 27C800 or 27C160 EPROMs (earlier versions only supported the former). I recommend using *-100F1* EPROMs by ST, but access time is not critical: use 100ns or faster EPROMs if you can, but anything up to 150ns should work reliably.
+Since V2, the adapter can be used with either 27C800 or 27C160 EPROMs (earlier versions only supported the former). I recommend using *-100F1* EPROMs by ST, but access time is not critical: use 100ns or faster EPROMs if you can, but anything up to 150ns should work reliably. If you do not have a UV eraser, you may use an MX29F1615 DIP42 chip which is a direct, pin compatible replacement of 27C160.
 
 #### 27C800
 With a 27C800 EPROM, the adapter supports 2x256 KB Kickstart images (i.e.: up to version 1.3) and 1x512 KB image (version 2 and later).
@@ -52,10 +52,12 @@ As SW1/SW2 will both read as HIGH if left unconnected, the 512 KB Kickstart will
 
 You can fully ignore the A19 pad on the bottom side of the board, when using a 27C800 EPROM.
 
-#### 27C160
+#### 27C160 / 29F1615
 With a 27C160 EPROM, the adapter supports up to 4x256 KB Kickstart images and 2x512 KB images.
 
 You will need to solder an additional switch to the A19 pad on the bottom side of the board. VCC and GND pads are provided nearby so that you can also solder a pull-up/down resistor.
+
+If you want to keep using a single switch, an eight position BCD coded rotary switch is an option. In your BCD switch's documentation, pins are going to be called 1, 2, 4, and C (collect). Wire collect to GND, SW1 to pin called 1, SW2 to pin 2, and A19 to pin 4; remember about the pullup resistor between A19 and VCC! This will result in a switch that goes "backwards": first image from your EPROM will be on switch position number 7. 512k images take two switch positions (0-1 and 4-5).
 
 | ROM Image # | Size (KB) | SW1 | SW2 | A19 |
 |-------------|-----------|-----|-----|-----|
@@ -75,7 +77,9 @@ When flashing the EPROM, make sure that the ROM images you are using are exactly
 * [One by keirff](https://github.com/keirf/PCB-Projects) (who, interestingly, has his own Kickstart Switcher)
 * [And another one by gaggi](https://github.com/gaggi/27c160-tl866-adapter)
 
-I have only used the latter and found it to be working fine.
+I have only used the latter and found it to be working fine. 
+
+The above adapters *should* work with MX29F1615, but this has not been confirmed; the official ADP_D42_EX-A for the T48 programmer is confirmed working with them.
 
 ### Installation
 Once your OpenKickstartSwitcher is assembled and programmed, the rest of the installation should be pretty straightforward:
