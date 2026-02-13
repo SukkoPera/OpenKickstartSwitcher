@@ -117,9 +117,6 @@ Again, if you want to use another manufacturer, feel free to, don't feel obligat
 
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-### Get Help
-If you need help or have questions, you can join [the official Telegram group](https://t.me/joinchat/HUHdWBC9J9JnYIrvTYfZmg).
-
 ### Thanks
 Thanks to Henryk Richter and the guys at the Italian Amiga Page forum.
 Kudos to Aldo PRS for prividing information about how the adapter fits on the various A500/500+ mainboard revisions.
